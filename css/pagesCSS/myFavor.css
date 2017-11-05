@@ -1,0 +1,73 @@
+
+.img {
+    width: 12em;
+    height: 12em;
+}
+
+.img:hover {
+    cursor: pointer;
+}
+
+.title {
+    color: #55de82;
+    font-size: 2em;
+}
+
+.title:hover {
+    cursor: pointer;
+    color: purple;
+}
+
+.description {
+    font-size: 1em;
+    color: grey;
+    /*height: 7em;*/
+    text-indent: 3em;
+}
+
+.description:hover {
+    cursor: pointer;
+    color: purple;
+}
+
+#pages {
+    float: left;
+    text-align: center;
+    margin-left: 46%;
+    margin-bottom: 20px;
+}
+
+.selected-pages {
+    background-color: #9ddeba;
+    color: white;
+}
+
+#pages div {
+    float: left;
+    border: solid #55de82 1px;
+    width: 2em;
+    height: 2em;
+    /*background-color: #9ddeba;*/
+    color: #55de82;
+}
+
+#pages div:hover {
+    background-color: #006699;
+    color: white;
+    cursor: pointer;
+}
+
+.page1 {
+    background-color: #006699;
+    color: white;
+}
+.page td{
+    text-align: center;
+}
+
+.delete{
+    background-color: red;
+}
+.delete:hover{
+    background-color:#006699;
+}

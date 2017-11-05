@@ -1,0 +1,77 @@
+body{
+    background-image: url(../../pic/bg.jpg);
+}
+
+/* search */
+#search_list{
+    width: 100%;
+    color: #FFFFFF;
+    border: none;
+}
+#modal-body{
+    background-color: #404040;
+}
+/* 播放器before */
+#infoMat{
+    padding:50px 0 50px 0;
+    margin-top: 60px;
+    border: 1px solid #222222;
+    border-radius: 20px;
+    background-color: rgba(190,190,190,0.2);
+}
+#infoMat>h1{
+    color: white;
+    text-align: center;
+}
+
+
+/* 左侧主窗口 */
+#left_div{
+    background-image: url(../../pic/bg_left2.jpg);
+    height: 735px;
+    margin-top: 60px;
+    padding: 20px;
+}
+#left_div>h3{
+    color: #FFFFFF;
+    margin:0;
+}
+
+tr:hover{
+    background-color: rgba(190,190,190,0.2);
+}
+td>a{
+    color: #FFFFFF;
+}
+td>a:hover{
+    text-decoration-line: none;
+    color: #337AB7;
+}
+
+.small_cover{
+    width: 45px;
+    height: 45px;
+    margin: 10px 0 10px 10px;
+}
+
+#form_upload{
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    margin:0 auto;
+}
+#form_upload>div{
+    margin-top: 20px;
+}
+.fileBtn{
+    height: 40px;
+    margin:0;
+    padding: 0;
+}
+
+#warningTip{
+    position: fixed;
+    top: 51px;
+    right: 0;
+}

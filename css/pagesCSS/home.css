@@ -1,0 +1,184 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+/*title*/
+.banner .pic h1 {
+    z-index: 20;
+    position: absolute;
+    /*height: 100px;*/
+    /*left: 3px;*/
+    margin-left: 2em;
+    margin-top: 1em;
+    font-family: "Times New Roman";
+    font-size: 3em;
+}
+
+.banner .pic h1:hover {
+    cursor: pointer;
+    color: #55de82;
+}
+
+/*title*/
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    border: 0px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.banner {
+    width: 100%;
+    height: 495px;
+    position: relative;
+    overflow: hidden
+}
+
+.banner .pic {
+    width: 9999px;
+    height: 495px
+}
+
+.banner .pic li {
+    width: 1100px;
+    height: 495px;
+    float: left
+}
+
+.banner .anniu {
+    width: 100px;
+    height: 16px;
+    position: absolute;
+    left: 500px;
+    top: 470px
+}
+
+.banner .anniu li {
+    width: 16px;
+    height: 16px;
+    background: white;
+    float: left;
+    margin: 2px;
+    display: inline;
+    cursor: pointer;
+    border-radius: 100%
+}
+
+.banner .anniu li.on {
+    background: red
+}
+
+.banner .lr {
+    width: 1100px;
+    height: 100px;
+    position: absolute;
+    top: 250px;
+    display: none
+}
+
+.banner .lr a {
+    color: white
+}
+
+.banner .lr .pre {
+    width: 30px;
+    height: 70px;
+    float: left;
+    background: none repeat scroll 0px 0px rgba(1, 0, 0, 0.6);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    cursor: pointer
+}
+
+.banner .lr .next {
+    width: 30px;
+    height: 70px;
+    float: right;
+    background: none repeat scroll 0px 0px rgba(1, 0, 0, 0.6);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    cursor: pointer
+}
+
+/*中间6个图片*/
+.other-hot {
+    margin-top: 10em;
+    margin-bottom: 7em;
+}
+
+ tr th {
+    text-align: center;
+    font-size: 1.5em;
+}
+.refresh:hover{
+    cursor: pointer;
+}
+ tr td {
+    text-align: center;
+    vertical-align: middle;
+     position: relative;
+}
+figcaption{
+    /*position: relative;*/
+}
+.hotpic2 {
+    width: 12em;
+    height: 12em;
+
+}
+
+.hotpic2:hover {
+    cursor: pointer;
+    margin-top: -0.5em;
+}
+.pic2 .title2{
+    color: #55de82;
+}
+.pic2 .title2:hover{
+    color: purple;
+    cursor: pointer;
+}
+.pic2 .description{
+    color: #e5efff;
+}
+.pic2 .description:hover{
+    cursor: pointer;
+    color: purple;
+}
+.view:hover{
+    cursor: pointer;
+}
+.view{
+    /*margin-left: 30%;*/
+   position: absolute;
+    left:6em;
+    /*top:3em;*/
+    bottom: 0.5em;
+}
+/*12张图片*/
+.newup {
+    margin-top: 5em;
+    margin-bottom: 10em;
+}
+
+.hotpic3{
+    width: 9em;
+    height: 9em;
+}
+
+.hotpic3:hover{
+    cursor: pointer;
+    margin-top: -0.5em;
+}

@@ -1,0 +1,23 @@
+
+.table-detail{
+    font-family: "Times New Roman";
+}
+.ti{
+    font-size: 1.5em;
+}
+#des {
+    height: auto;
+    border: 1px solid #363a87;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#des div {
+    height: 100%;
+    text-indent: 2em;
+    font-size: 1.5em;
+
+}
+#add:hover{
+    cursor:pointer;
+}

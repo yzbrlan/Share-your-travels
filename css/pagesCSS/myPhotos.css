@@ -1,0 +1,69 @@
+
+.img {
+    width: 12em;
+    height: 12em;
+}
+
+.img:hover {
+    cursor: pointer;
+}
+
+h1 {
+    color: #55de82;
+    font-size: 2em;
+    float: left;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: purple;
+}
+
+#pages {
+    float: left;
+    text-align: center;
+    margin-left: 46%;
+    margin-bottom: 20px;
+}
+
+.selected-pages {
+    background-color: #9ddeba;
+    color: white;
+}
+
+#pages div {
+    float: left;
+    border: solid #55de82 1px;
+    width: 2em;
+    height: 2em;
+    /*background-color: #9ddeba;*/
+    color: #55de82;
+}
+
+#pages div:hover {
+    background-color: #006699;
+    color: white;
+    cursor: pointer;
+}
+
+.page1 {
+    background-color: #006699;
+    color: white;
+}
+
+.pictable:first-child {
+    vertical-align: middle;
+    text-align: center;
+}
+.modify{
+    margin-bottom: 1%;
+    margin-left: 80%;
+}
+.delete{
+    background-color: red;
+    margin-top: 1%;
+    margin-left: 80%;
+}
+.page td{
+    text-align: center;
+}

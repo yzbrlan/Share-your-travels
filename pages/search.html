@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/pagesCSS/nav.css"/>
+    <link rel="stylesheet" href="../css/pagesCSS/footer.css"/>
+    <link rel="stylesheet" href="../css/pagesCSS/search.css"/>
+    <link rel="icon" href="../pic/icon.png"/>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/md5.js"></script>
+    <script src="../js/pagesJS/search.js"></script>
+    <!--<script src="../js/photoPlayer/jquery.jplayer.js"></script>-->
+    <!--<script src="../js/photoPlayer/ttw-photo-player-min.js"></script>-->
+</head>
+
+<body style="padding-top: 50px">
+
+<!--导航栏-->
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class=" icon-cloud"></span> Share Your Travels</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="home.html"><span class="icon-comments"> Home</span></a></li>
+                <li><a href="browser.html"><span class="icon-cloud-upload"> Browser</span></a></li>
+                <li class="active"><a href="#"><span class="icon-suitcase"> Search</span></a></li>
+            </ul>
+            <div class="navbar-form pull-right">
+                <a class="btn btn-success" id="loginAndReg" href="register.html">Register</a>
+                <button class="btn btn-default" id="loginAndReg1" data-toggle="modal" data-target="#user_Login">Log in
+                </button>
+                <a id="user_info_nav" href="#" style="visibility: hidden"><span id="user_name_nav" style="font-size: medium; color: white"></span>
+                    <ul id="user_info_dropdown" style="top: 50px; right: 0;">
+                        <li id="uploadUser">
+                            <span class="glyphicon glyphicon-cloud-upload">
+                                Upload
+                            </span>
+                        </li>
+                        <li id="favorUser">
+                            <span class="glyphicon glyphicon-star-empty">
+                            MyFavor
+                            </span>
+                        </li>
+                        <li id="photoUser">
+                            <span class="glyphicon glyphicon-picture">
+                            MyPhotos
+                            </span>
+                        </li>
+                        <li id="exitUser">
+                            <span class="glyphicon glyphicon-log-out">
+                                Logout
+                            </span>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</div>
+
+<!--主页面-->
+<div id="divMain" class="container">
+    <div class="row">
+        <div class="col-xs-12" id="left_window">
+            <div id="left_div">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr class="danger">
+                            <th>Search</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="active">
+                            <td>
+                                <input type="radio" checked name="filter" id="byTitle"/>Filter By Title
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                <input id="filterTitle" name="title" type="text" class="form-control"
+                                       aria-describedby="sizing-addon1" autofocus>
+                            </td>
+                        </tr>
+                        <tr class="warning">
+                            <td>
+                                <input type="radio" name="filter" id="byDescription">Filter By Dscription
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                    <textarea name="description" id="filterDescription" class="form-control"
+                                              aria-describedby="sizing-addon1"></textarea>
+
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                <button id="filterBt" type="submit" class="btn btn-primary btn-lg pull-left">Filter
+                                </button>
+                                <a id="warning"></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="result">
+                    <dl>
+                        <dt><a>Search Result</a></dt>
+                        <dt>
+                            <img class="img img-responsive img-thumbnail img-rounded"/>
+                        <div class="description">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        </dt>
+
+                        <dt>
+                            <img class="img img-responsive img-thumbnail img-rounded"/>
+                        <div class="description">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        </dt>
+                        <dt>
+                            <img class="img img-responsive img-thumbnail img-rounded"/>
+                        <div class="description">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                        </dt>
+                    </dl>
+                    <div id="pages" class="col-xs-12">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--登陆框-->
+<div class="modal fade" id="user_Login" tabindex="-1" role="dialog" aria-labelledby="user_Msg_to" aria-hidden="true">
+    <div class="modal-dialog" id="userLoginBox">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="user_Msg_to">Log in</h4>
+            </div>
+            <div class="modal-body">
+                <div id="inputBox" class="text-center">
+                    <p>Login and you can do what you want</p>
+                    <form id="form1">
+                        <p>
+                        <div id="div-email_address" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email_address" class="form-control" type="text" placeholder="Email address">
+                        </div>
+                        </p>
+                        <p>
+                        <div id="div-password" class="input-group">
+                            <span class="input-group-addon"><i class="icon-key"></i></span>
+                            <input id="user_pass" class="form-control" type="password" placeholder="Password">
+                        </div>
+                        </p>
+                        <a id="login_to" class="btn btn-block btn-success">
+                            <i class="glyphicon glyphicon-log-in"></i> Log in</a>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div id="qrCode">
+    <img src="../pic/wxqrcode.png" class="img-responsive"/>
+</div>
+<div id="foot-div">
+    <div>
+        Copyright &copy; 2017 吴茜雅 CiCi & All rights reserved
+    </div>
+</div>
+<script src="../js/newFunction.js"></script>
+<script>
+    //设置下拉框位置,绑定到窗口resize
+    dropdownPosition();
+    window.addEventListener("resize", dropdownPosition, false);
+    //给登录框绑定样式事件
+    loginStyle("email_address", "user_pass", "login_to");
+    //识别登录状态
+    window.addLoadEvent(checkLogin);
+    //绑定退出登录按钮事件
+    document.getElementById("exitUser").addEventListener("click", exitLogin, false);
+    //登录框项目锁定
+    document.getElementById("uploadUser").addEventListener("click", function () {
+        document.getElementById("user_info_nav").setAttribute("href", "../pages/upload.html");
+    }, false);
+    document.getElementById("photoUser").addEventListener("click", function () {
+        document.getElementById("user_info_nav").setAttribute("href", "../pages/myPhotos.html");
+    }, false);
+    document.getElementById("favorUser").addEventListener("click", function () {
+        document.getElementById("user_info_nav").setAttribute("href", "../pages/myFavor.html");
+    }, false);
+
+</script>
+
+</body>
+</html>
